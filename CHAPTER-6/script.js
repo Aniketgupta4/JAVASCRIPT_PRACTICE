@@ -82,9 +82,8 @@ console.log(Math.floor(Math.random()*(max-min+1)+min))
                             // give 0 to 11   + 40  -> so give values 40 to 50
 
 // -> explanation see image2      
-
-
-
-
-
+// -> **** it uses system clock to generate random values so if same time me 2 baar run karoge to same value ayegi dono baar
+// -> it is not use for security purpose like password generate karne ke liye use nahi karna chahiye
+// -> not use for otp generation also
+// -> **** it is not used for otp beacuse hacker can hack your system then it will guess your password
 
