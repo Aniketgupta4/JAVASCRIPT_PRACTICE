@@ -87,3 +87,5 @@ console.log(Math.floor(Math.random()*(max-min+1)+min))
 // -> not use for otp generation also
 // -> **** it is not used for otp beacuse hacker can hack your system then it will guess your password
 
+// -> **** see image3 -> basically random() uses system clock to generate random number  
+// -> we cant use random() for otp beacuse if hacker hack users system it will predict otp according to our system  
