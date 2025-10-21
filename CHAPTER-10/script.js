@@ -74,3 +74,14 @@ console.log(arr.__proto__ == Array.prototype)
 console.log(arr.__proto__.__proto__ == Object.prototype)
 console.log(arr.__proto__.__proto__.__proto__ == null) // 3rd time pe proto ni hota hai
 console.log(Array.prototype.__proto__ === Object.prototype)
+
+
+
+
+
+
+// prototype revision -> see image4
+
+// Array.prototype , Object.prototype is name
+// and by arr.__proto__ we inherit to next level / ones
+
