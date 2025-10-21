@@ -177,3 +177,140 @@ const b = new String("op");
 console.log(typeof b)
 
 
+
+
+
+
+
+
+// class 10 object 
+
+
+
+// **** shallow copy -> copy with reference -> so change in one reflect in all copys
+// see image3
+
+let objs1 = {
+  a:1,
+  b:2
+}
+
+let objs2 = objs1; // shallow copy -> any change in objs2 and objs1 reflect in both -> same copy point multiple ones
+objs.a = 4;
+console.log(objs2)
+console.log(objs1)
+
+
+// deep copy -> actual copy not point to each other -> alag alag copy banegi 
+
+let objs3 = structuredClone(objs1);
+objs3.a = 20;
+console.log(objs3)
+console.log(objs1)
+
+
+
+
+ // nested object 
+ 
+ const user = {
+    name:"aniket", // deep copy create
+    balance:420,   // deep copy create
+    address:{  // nested object
+         pincode : 654334,        // as a reference store -> shallow copy
+         city: "kotdwar"          // as a reference store -> shallow copy
+    }
+ }
+
+ console.log(user.address.pincode)
+ user.address.city = "sahanpur"
+ console.log(user.address.city)
+
+
+
+ // **** use assign -> nested object ke time pe create **** shallow copy
+const user2 = Object.assign({},user);
+console.log(user2)
+
+// **** means user1 and user ke liye name and balance are diferent different deep copy and for pincode and city as it is nested object so it create a shallow copy where both user and user2 point to same one  
+
+// **** nested object ke time pe create **** shallow copy
+user2.address.pincode = 341248;
+console.log(user.address.pincode);
+
+// **** yaha pe changes ni hoga because name nested ni hai -> so deep copy create here
+user2.address.name = "sham";
+console.log(user.name);
+
+// ******** same work for spread operator too
+// ********** use structedclone to create copy of anyone seperately
+
+
+
+
+
+// destructuring of an object
+
+
+let objs8 = {
+    name:"aniket",
+    age:25,
+    account_balance:5000,
+    gender:"male"
+}
+
+//const {name,age} = objs8
+//console.log(name,age)
+
+// const {name,age,gender} = objs8
+// console.log(name,age,gender)
+
+// const {name:fullname,age:ages} = objs8
+// console.log(fullname,ages)
+
+
+// **** kuch property ajaye and baki ki alag obj pe chali jaye
+
+const {name,age,...objst1} = objs8 // -> here ... is known as rest operator ki ap rest karo
+console.log(name,age)
+console.log(objst1)
+
+
+// same destrucing done for array to
+
+const arr1 = [2,3,1,4,2,5,7,4,7,8];
+//const [first,second,fourth] = arr1; // normal 
+//const [first,second,,fourth] = arr1; // we also skip anyone
+const [first,second,...third] = arr1; // jo bache hai third ke ander chale jaye -> by rest operator ...
+console.log(first,second)
+
+
+
+// destructure nested wale ko
+
+let objs9 = {
+    name:"aniket",
+    age:25,
+    arrs:[2,4,1,5],
+    address:{
+        pincode:365432,
+        city:"bhopal"
+    }
+}
+
+//const {address:adds} = objs9; // address ke ander sa sab adds pe agya so do
+const {address:{pincode}} = objs9 // nested destructuring
+console.log(pincode)
+
+
+// get 1st value of array inside object
+
+// const {arrs:[firstvalofarray]} = obj;
+// console.log(firstvalofarray)
+// or
+// const {arrs:arrr} = obj;
+// const [firsts] = arrr;
+// console.log(firsts)
+
+
+ 
