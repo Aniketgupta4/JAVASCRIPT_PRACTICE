@@ -64,3 +64,116 @@ console.log(obj1[0])
 
 // -----------------------------------------------------------------------------------------------------------------------------
 
+
+
+// way to create object -> 2nd way -> not recommened to use this methods
+
+const person = new Object(); // object constructor -> at start it is empty object
+
+person.name = "aniket";
+person.age = 25;
+person.gender = "male";
+
+console.log(person)
+
+//delete person.age; // delete key value pair
+//console.log(person)
+
+person.age = 26; // update value of key
+console.log(person)
+
+
+// **** => object as a reference store hota hai -> means agar ek object ko ek variable me store karte hai and uske baad us variable ko dusre variable me store karte hai to dono variable same object ko point karenge -> dono me change same object me hoga -> store reference in stack
+
+
+const person1 = person; // person1 and person point to same object in memory
+person1.age = 30; // change in person1 will reflect in person
+console.log(person.age); // 30
+console.log(person1.age); // 30
+
+
+
+
+// ******** in first way to create object -> we have to write key value pair again and again for multiple objects
+// ****** 3rd way to create object
+// adv -> easy to create multiple objects using class
+
+class Person{
+    constructor(names,ages,genders){ // pehle isme values ayengi jo hmne pass kari hai 
+        this.name = names;    // this refer to current object -> person2.name  then this.name = person2.name and so on
+        this.age = ages; 
+        this.gender = genders;
+    }
+}   
+    
+const person2 = new Person("sham",28,"male");
+console.log(person2)
+const person3 = new Person("rita",24,"female");
+console.log(person3)
+
+
+
+
+// **** access values of object
+
+let objs = {
+    name:"aniket",
+    age:25,
+    account_balance:5000,
+    gender:"male"
+}
+
+// returns keys of object as array
+console.log(Object.keys(objs)) // [ 'name', 'age', 'account
+
+// or
+
+Object.keys(objs).forEach((key)=>{
+    console.log(`Key is ${key} and value is ${objs[key]}`);
+})
+
+
+// key value both return -> in 2d array form
+
+const arr2 = Object.entries(objs);
+console.log(arr2) // [ [ 'name', 'aniket' ], [ 'age', 25 ], [ 'account_balance
+
+
+
+
+
+// assign use case
+
+const obj5 = {a:1,b:2};
+const obj6 = {c:3,d:4};
+
+// const obj8 = Object.assign(obj5,obj6); // but object5 is changed -> beacuse first value as a target lete hai so correct it give empty object ki isme changes ho
+// console.log(obj5) // isme bhi channges ho jaye -> correct it use {} in first
+
+// const obj8 = Object.assign(target,source);
+const obj8 = Object.assign({},obj5,obj6);
+console.log(obj8)
+
+
+
+// spread operator -> same use as assign
+
+const obj9 = {...obj5,...obj6}
+console.log(obj9)
+
+
+
+
+
+// -----------------------------------------------------
+
+// ***** new keyword se banao kuch toh -> object hi hota hai 
+// new keyword hai -> so memory allocate in heap and as a object hoga internally implement
+
+const a = new Number(1);
+console.log(typeof a)
+
+const b = new String("op");
+console.log(typeof b)
+
+
