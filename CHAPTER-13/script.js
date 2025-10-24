@@ -193,5 +193,57 @@ for(let key in arr){
     console.log(key,arr[key]);
 }
 
-// use basic loop with array not use for in loop
+// use basic loop with array not use for in loop -> it only print key not print "name" direct in place or index
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// ****** myth -> so bolte hai hacking se bachne ke liye ni hai -> agar hacker ko code mil gya so wo manually changes kar shakta hai na
+// **** ye sirf is liye hai ki -> accidental changes se bach paye bs
+
+let user = {
+    name:"aniket",
+    age:30
+}
+
+console.log(Object.getOwnPropertyDescriptor(user,"name"));
+
+Object.defineProperty(user,"name",{
+    writable:false,
+});
+
+user.name = "ani";  // **** not change beacuse writable is false
+console.log(user.name);
+
+console.log(Object.getOwnPropertyDescriptor(user,"name"));
+
+
+
+// for of loop -> values access -> access array and string value directly
+// *** dont use for of loop with object
+
+let arrss = [4,3,2,5,6,8]
+for(let value of arrss){
+   console.log(value);
+}
+
+
+let str = "aniket is good boy";
+for(let value of str){
+   console.log(value);
+} 
+
+
+
+// **** not use with object for of loop -> because object is not iterable -> object pe agar key number hai so usko string pe convert karke sequence wise arrange karta hai so ye iterable ni hai means decide ni hai ki kaha jana hai kaha ni 
+// * object is not iterable
+
+const objs = {
+    name:"aniket",
+    age:24
+}
+
+    // show lamba sa error
+// for(let value of objs){
+//    console.log(value);
+// }
