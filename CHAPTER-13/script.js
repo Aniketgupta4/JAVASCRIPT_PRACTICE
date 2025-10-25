@@ -238,7 +238,7 @@ for(let value of str){
 // **** not use with object for of loop -> because object is not iterable -> object pe agar key number hai so usko string pe convert karke sequence wise arrange karta hai so ye iterable ni hai means decide ni hai ki kaha jana hai kaha ni 
 // * object is not iterable
 
-const objs = {
+const objss= {
     name:"aniket",
     age:24
 }
@@ -247,3 +247,13 @@ const objs = {
 // for(let value of objs){
 //    console.log(value);
 // }
+
+
+// but jid ke karan for of loop se print karana hi hai toh
+for(let value of Object.values(objss)){
+    console.log(value,);
+}
+
+
+
+
