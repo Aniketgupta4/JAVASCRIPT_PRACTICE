@@ -25,6 +25,8 @@
 
 
 
+// see all outputs in console by do this 
+
 // 1) accessing element in dom
 
 // document.getElementById("first")
@@ -44,9 +46,12 @@ obj.style.textAlign = "center"
 obj.className = "op"    // className 
 console.log(obj.className)  
 
-obj.id = "ops"      // id
+obj.id = "ops"       // id
 console.log(obj.id)
 
+console.log(obj.tagName)
+
+console.log(typeof obj); // **** object -> so we use any properties in obj
 
 
 
