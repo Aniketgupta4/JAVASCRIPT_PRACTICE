@@ -25,7 +25,6 @@ root.appendChild(element);
 
 
 
-
 // iii) add multiple elements by -> append
 
 
@@ -138,6 +137,7 @@ const p2 = document.getElementById("root")
 parent.innerHTML += "java";
 // or
 parent.innerHTML += "<li>java</li>";
+
 
 
 
