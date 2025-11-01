@@ -9,6 +9,7 @@
 // root.appendChild(element); // at a time 1 add
 
 
+
   
 // ii) make function to add element
 
@@ -137,6 +138,7 @@ const p2 = document.getElementById("root")
 parent.innerHTML += "java";
 // or
 parent.innerHTML += "<li>java</li>";
+
 
 
 
