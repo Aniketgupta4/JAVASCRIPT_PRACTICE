@@ -140,12 +140,28 @@ parent.innerHTML += "<li>java</li>";
 
 
 
+ // f) see image1 -> using insertAdjacentHTML() or insertAdjacentElement() -> 4 hai isme -> beforebegin afterbegin beforeend afterend
+        // kisi content se pehle kuch add karna ho div and all so de this
+     
+ const ele = document.createElement("div")
+ ele.innerHTML = "new div"
+//  parents.insertAdjacentElement("beforebegin",ele); 
+//  parents.insertAdjacentElement("afterend",ele); 
+//  parents.insertAdjacentElement("afterbegin",ele);  // as a first child treat hoga
+//  parents.insertAdjacentElement("beforeend",ele);      // as a last child treat hoga
 
 
 
+// ---------------------------------------------
+
+
+// 6) delete node or element
+
+// const del = document.querySelector("li").remove();
 
 
 
+ // 7) remove child node -> hw
 
 
 
