@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Cricket Quiz</h2>
+
+    <form>
+
+      <!-- name : value <-> key : value -->
+      <!-- name is unique but jab ek group pe toh 1 individual group ka naam same hota hai inme se ek hi sahi hota hai value ek group se -->
+     
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. Who has the most centuries in international cricket?</p>
+        <label><input type="radio" name="q1" value="Sachin Tendulkar"> Sachin Tendulkar</label>
+        <label><input type="radio" name="q1" value="Virat Kohli"> Virat Kohli</label>
+        <label><input type="radio" name="q1" value="Ricky Ponting"> Ricky Ponting</label>
+        <label><input type="radio" name="q1" value="Jacques Kallis"> Jacques Kallis</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. Which country won the first ICC Cricket World Cup?</p>
+        <label><input type="radio" name="q2" value="Australia"> Australia</label>
+        <label><input type="radio" name="q2" value="England"> England</label>
+        <label><input type="radio" name="q2" value="West Indies"> West Indies</label>
+        <label><input type="radio" name="q2" value="India"> India</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. Who is known as the 'God of Cricket'?</p>
+        <label><input type="radio" name="q3" value="Virat Kohli"> Virat Kohli</label>
+        <label><input type="radio" name="q3" value="Don Bradman"> Don Bradman</label>
+        <label><input type="radio" name="q3" value="MS Dhoni"> MS Dhoni</label>
+        <label><input type="radio" name="q3" value="Sachin Tendulkar"> Sachin Tendulkar</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. What is the highest individual score in ODI cricket?</p>
+        <label><input type="radio" name="q4" value="264"> 264</label>
+        <label><input type="radio" name="q4" value="200"> 200</label>
+        <label><input type="radio" name="q4" value="237"> 237</label>
+        <label><input type="radio" name="q4" value="275"> 275</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. Which bowler has taken the most wickets in Test cricket?</p>
+        <label><input type="radio" name="q5" value="Muttiah Muralitharan"> Muttiah Muralitharan</label>
+        <label><input type="radio" name="q5" value="Shane Warne"> Shane Warne</label>
+        <label><input type="radio" name="q5" value="James Anderson"> James Anderson</label>
+        <label><input type="radio" name="q5" value="Anil Kumble"> Anil Kumble</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div id="out"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

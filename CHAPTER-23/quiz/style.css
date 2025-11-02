@@ -1,0 +1,75 @@
+/* Reset and basic layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Quiz Card */
+.quiz-container {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 420px;
+}
+
+.quiz-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Questions */
+.question {
+  margin-bottom: 25px;
+}
+
+.question p {
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Radio buttons and labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #007bff; /* Modern browsers show blue circle */
+}
+
+/* Submit button */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
