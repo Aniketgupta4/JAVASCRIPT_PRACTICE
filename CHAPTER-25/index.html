@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstroSpark — Quick Astrology</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="card-header">
+      <div class="brand">
+        <div class="logo">🔯</div>
+        <div>
+          <h1>AstroSpark</h1>
+          <p class="subtitle">Enter DOB, get zodiac + short reading</p>
+        </div>
+      </div>
+
+      <div class="mode-toggle">
+        <label class="switch">
+          <input id="themeToggle" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+
+    <section class="form-area">
+      <!-- Input form -->
+      <form id="astroForm">
+        <div class="row">
+          <div class="input-group">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Your first name" required />
+          </div>
+
+          <div class="input-group">
+            <label for="surName">Surname</label>
+            <input id="surName" name="surName" type="text" placeholder="Your surname" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group small">
+            <label for="day">Day</label>
+            <input id="day" name="day" type="number" min="1" max="31" placeholder="DD" required />
+          </div>
+
+          <div class="input-group small">
+            <label for="month">Month</label>
+            <input id="month" name="month" type="number" min="1" max="12" placeholder="MM" required />
+          </div>
+
+          <div class="input-group">
+            <label for="year">Year</label>
+            <input id="year" name="year" type="number" min="1900" max="2099" placeholder="YYYY" required />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="submitBtn" type="submit">Reveal My Sign</button>
+          <button id="clearBtn" type="button" class="ghost">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Result Card -->
+    <section id="result" class="result" aria-live="polite" hidden>
+      <div class="result-top">
+        <div class="result-name">
+          <h2 id="displayName">Hello, Name</h2>
+          <p id="displayDOB" class="muted">DOB: --</p>
+        </div>
+        <div class="zodiac-badge" id="zodiacBadge">♈</div>
+      </div>
+
+      <div class="result-body">
+        <h3 id="zodiacName">Aries</h3>
+        <p id="zodiacRange" class="muted">Mar 21 - Apr 19</p>
+        <p id="zodiacDesc">A short astrology reading appears here...</p>
+      </div>
+
+      <div class="result-actions">
+        <button id="restartBtn" class="ghost">Try Another</button>
+        <button id="shareBtn">Copy Reading</button>
+      </div>
+    </section>
+
+    <footer class="card-footer">
+      <small>Designed with ❤️ · Simple zodiac info. For fun only.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
